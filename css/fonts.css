@@ -1,0 +1,11 @@
+/*Fonts*/
+
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: raleway-d;
+	src: url(../fonts/RussoOne-Regular.ttf);
+}

@@ -1,0 +1,164 @@
+@import url("fonts.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.back_button {
+	display: inline-block;
+	background-color: #bc0000;
+	color: white;
+	padding: 8px;
+	border: 1px solid #bc0000;
+	text-decoration: none;
+	font-size: 15px;
+	font-family: raleway-c;
+	margin-bottom: 20px;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.back_button:hover {
+	background-color: white;
+	color: #bc0000;
+	border: 1px solid #bc0000;
+}
+
+.title {
+	text-align: center;
+	font-size: 2.5em;
+	margin: 0px 0 50px;
+	color: #333;
+	font-family: raleway-d;
+	font-weight: normal;
+}
+
+.news_layout {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.news_card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 1, 0.7);
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	transition: transform 0.2s;
+	color: white;
+	padding: 20px;
+	min-height: 300px;
+}
+
+.news_card:hover {
+	transform: scale(1.02);
+}
+
+.news_content {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 20px;
+	margin-top: 200px;
+	border-radius: 8px;
+}
+
+.news_card h2 {
+	font-size: 1.8em;
+	margin: 0 0 10px;
+	font-family: raleway-d;
+	font-weight: normal;
+}
+
+.news_card p {
+	font-size: 1.1em;
+	line-height: 1.4em;
+	margin-bottom: 10px;
+	font-family: raleway-c;
+}
+
+.date {
+	display: block;
+	font-size: 0.9em;
+	font-family: raleway-c;
+}
+
+@media (max-width: 768px) {
+
+.news_card {
+	min-height: 250px;
+	padding: 15px;
+}
+
+.news_card h2 {
+	font-size: 1.4em;
+}
+
+.news_card p {
+	font-size: 0.95em;
+}
+
+.date {
+	font-size: 0.8em;
+}
+}
+
+@media (max-width: 480px) {
+.news_card {
+	flex-direction: column;
+	padding: 10px;
+}
+
+.news_content {
+	background: none;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+
+.news_card h2 {
+	font-size: 1.6em;
+}
+
+.news_card p {
+	font-size: 1em;
+	line-height: 1.6em;
+}
+
+.back_button {
+	font-size: 1em;
+	padding: 8px;
+	margin-top: 30px;
+}
+
+.title {
+	font-size: 2.8em;
+	margin-top: 20px;
+}
+
+.news_layout {
+	gap: 10px;
+}
+
+.container {
+	padding: 10px;
+}
+
+.date {
+	font-size: 0.7em;
+}
+}
