@@ -1,8 +1,8 @@
 <?
 $server = 'localhost';
-$login = 'dartem2005';
+$login = 'dartemq2_tetsbd';
 $pass = 'Temoha2003';
-$nameDb = 'dartem2005';
+$nameDb = 'dartemq2_tetsbd';
 
 $connect = mysqli_connect($server, $login, $pass, $nameDb);
 if ($connect == false) {
