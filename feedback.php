@@ -14,7 +14,6 @@ require_once 'config/datebase.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
 </head>
 <body>
-    <a href="index.php" class="back_button">Назад</a>
     <div class="wrapper">
         <div class="container">
             <form id="contactForm" action="vender/submit_form.php" method="post">
@@ -68,6 +67,7 @@ require_once 'config/datebase.php';
             <div class="button_container">
                 <button id="hideTableButton" style="display:none;">Скрыть таблицу</button>
                 <button id="showTableButton">Показать таблицу</button>
+								<a href="index.php"><button>Назад</button></a>
             </div>
         </div>
     </div>
