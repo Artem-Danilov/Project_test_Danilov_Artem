@@ -29,22 +29,21 @@ $(document).ready(function() {
 			}
 	});
 
-	// Валидация адреса
-	addressInput.addEventListener('input', function() {
-			var currentValue = addressInput.value.trim();
-			var addressPattern = /^г\.\s*\p{L}+, ул\. [\p{L}\d\s]+(?: \d+[А-Я]?(?:, кв\.\s*\d+)?|, кв\.\s*\d+)?$/u;
+		addressInput.addEventListener('input', function() {
+    var currentValue = addressInput.value.trim();
+    var addressPattern = /^(г\.\s*)?\p{L}+(,?\s*ул\.?)? [\p{L}\d\s]+(?: \d+[А-Яа-я]?(,?\s*кв\.?\s*\d+)?)?$/u;
 
-			if (!addressPattern.test(currentValue) && currentValue.length > 0) {
-					addressInput.setCustomValidity("Введите корректный адрес. Например, г. Тула, ул. Седова 14 А, кв. 53");
-			} else {
-					addressInput.setCustomValidity("");
-			}
-	});
+    if (!addressPattern.test(currentValue) && currentValue.length > 0) {
+        addressInput.setCustomValidity("Введите корректный адрес. Например, Тула, Седова 14 А, кв. 53");
+    } else {
+        addressInput.setCustomValidity("");
+    }
+});
 
 	$("#contactForm").on('submit', function(event) {
 			var phoneNumber = phoneInput.value.replace(/\D/g, '');
 
-			// Проверяем длину номера телефона
+			
 			if (phoneNumber.length !== 11) {
 					phoneInput.setCustomValidity("Введите корректный номер телефона. Например, +7 (999) 999 - 99 - 99");
 					event.preventDefault();
